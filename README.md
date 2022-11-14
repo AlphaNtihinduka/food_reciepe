@@ -1,110 +1,117 @@
-![](https://img.shields.io/badge/Microverse-blueviolet) ![Ruby](https://img.shields.io/badge/ruby-%23CC342D.svg?style=for-the-badge&logo=ruby&logoColor=white) ![Rails](https://img.shields.io/badge/rails-%23CC0000.svg?style=for-the-badge&logo=ruby-on-rails&logoColor=white) ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+![Microverse](https://img.shields.io/badge/-Microverse-%20%236f23ff?style=for-the-badge) 
 
-# Blog App 
- 
-> The Blog App will is a fully functional website that will show the list of posts and allows readers to interact with them by adding comments and liking posts.
+![Ruby](https://img.shields.io/badge/ruby-%23CC342D.svg?style=for-the-badge&logo=ruby&logoColor=white) 
+![Rails](https://camo.githubusercontent.com/2f7aa65a22dedd331620c426fd36d88c01600b2c8ed750c41cc72b4d86364937/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f7261696c732d2532334343303030302e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d727562792d6f6e2d7261696c73266c6f676f436f6c6f723d7768697465)
+
+# Rails Food recipe App 
+
+> The Recipe app keeps track of all your recipes, ingredients, and inventory. It will allow you to save ingredients, keep track of what you have, create recipes, and generate a shopping list based on what you have and what you are missing from a recipe. Also, since sharing recipes is an important part of cooking the app should allow you to make them public so anyone can access them. 
 
 
-## Built With
+## Built With :hammer_and_wrench: 
 
-- [x] Ruby (programming language)
-- [x] Rails (framework)
-- [x] PostgreSQL (database)
-- [x] Linters: [Rubocop](https://rubocop.org/)
-- [x] Linters: [Stylent](https://stylelint.io/)
-- [x] Visual Studio Code (code editor)
-- [x] RSpec (testings) 
+- **Ruby:** Popular programming language that’s used for lots of things, from web app development to data analysis.
 
-## Getting Started
+- **Rails:**  Full-stack framework. It ships with all the tools needed to build amazing web apps on both the front and back end.
 
-To get a local copy up and running follow these simple steps.
+- **GitHub flow:**  Correct use of Branches for deployment and features development.
 
-### Prerequisites
+- **Linters Check (Rubocop):** Local and Pull Request check for errors, bugs and stylistic errors in code.
 
-- [x] A web browser like Google Chrome.
-- [x] A code editor like Visual Studio Code with Git and Ruby.
+- **RSpec:** Unit test framework for the Ruby programming language.
 
-You can check if Git is installed by running the following command in the terminal.
+- **PostgreSQL:** powerful, open source object-relational database system with over 35 years of active development that has earned it a strong reputation for reliability, feature robustness, and performance.
+
+## Entity Relationship Diagram 
+
+![](./recipe_erd.png)
+
+
+## Getting Started ➡️
+
+To get a local copy up and running follow these simple steps.:arrow_down:
+
+### Prerequisites ✅
+- A code editor like Visual Studio Code with Git and Ruby.
+- You can check if Git is installed by running the following command in the terminal: 
+
 ```
 $ git --version
 ```
 
 Likewise for Ruby installation.
+
 ```
-$ ruby --version && irb
-```
+$ ruby --version
+``` 
 
 ### Setup
 
-Clone the repository using the GitHub link provided below.
-
-### Install
-
-In the terminal, go to your file directory and run this command.
-
+1. Clone the GitHub repository using the  this link 
 ```
-$ git clone git@github.com:AlphaNtihinduka/rails-templete.git
+  $ git clone https://github.com/AlphaNtihinduka/food_reciepe.git
 ```
+2. Checkout to the branch
 ```
-$ cd Blog-App
+$ git checkout dev
 ```
-Run the following command to install all dependencies.
+3. Run in your terminal to install all gems required to run the app.
 ```
 $ bundle install
-```
-```
-$ code .
-```
-### Run tests
-
-Run the local server with:
+``` 
+4. Go to your terminal and run the app with the following command:
 ```
 $ rails server
 ```
-Open it by accessing http://localhost:3000/ on your browser.
+- **Navigate:** to http://localhost:3000/ 
 
-### Run tests
 
-To install rspec, in the terminal run this command
+## Run tests
 
+To install rspec, i the terminal kindly run this command
 ```
 $ gem install rspec
 ```
-
-To run tests, please run this command
-
+To run tests. please run this command
 ```
-$ rspec ./spec/#{filename}_spec.rb
+$ rspec spec/#{filename}_spec.rb
 ```
 
-### Usage
+## Author :writing_hand:
 
-Kindly modify the files as needed.
+:man_technologist:  **Aron Abraham** :writing_hand: 
 
-## Author
+- GitHub: [@Aaron](https://github.com/aron-helu)
+- LinkedIn: [@Aaron](https://www.linkedin.com/in/aron-abraham-90a4321b0/)  
 
-**Ntihinduka Alpha**
+## Author :writing_hand:
+
+:man_technologist:  **Rodrigo Johann Reckziegel Nunes** :writing_hand: 
+
+- GitHub: [@Hannziegel](https://github.com/Hannziegel)
+- LinkedIn: [Rodrigo Johann Reckziegel Nunes](https://www.linkedin.com/in/rodrigojrnunes/)
+
+:man_technologist:  **Ntihinduka Alpha** :writing_hand: 
 
 - GitHub: [githubhandle](https://github.com/AlphaNtihinduka)
 - Twitter: [twitterhandle](https://twitter.com/@alphantihinduka)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/ntihinduka-alpha-81bb7b22a/)
-
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/ntihinduka-alpha-81bb7b22a/) 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/AlphaNtihinduka/rails-templete/issues).
+Feel free to check the [issues page](../../issues/).
 
 ## Show your support
 
 Give a ⭐️ if you like this project!
 
 ## Acknowledgments
-
 - [Microverse](https://www.microverse.org/)
-- Coding Partners
-- Code Reviewers
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc
 
 ## 📝 License
 
-This project is [MIT](./MIT.md) licensed.
+This project is [MIT](./LICENSE) licensed.
