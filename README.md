@@ -91,6 +91,8 @@ $ rspec spec/#{filename}_spec.rb
 - GitHub: [@Hannziegel](https://github.com/Hannziegel)
 - LinkedIn: [Rodrigo Johann Reckziegel Nunes](https://www.linkedin.com/in/rodrigojrnunes/)
 
+## Author :writing_hand:
+
 :man_technologist:  **Ntihinduka Alpha** :writing_hand: 
 
 - GitHub: [githubhandle](https://github.com/AlphaNtihinduka)
