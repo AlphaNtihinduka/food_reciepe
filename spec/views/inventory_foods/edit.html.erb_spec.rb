@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe "inventory_foods/edit", type: :view do
   let(:inventory_food) {
     InventoryFood.create!(
-      quantity: "MyString"
+      quantity: 1
     )
   }
 
