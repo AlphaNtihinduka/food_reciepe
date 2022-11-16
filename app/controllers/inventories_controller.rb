@@ -3,7 +3,7 @@ class InventoriesController < ApplicationController
 
   # GET /inventories or /inventories.json
   def index
-    @inventories = Inventory.all
+    @inventories = Inventory.where(user: current_user)
   end
 
   # GET /inventories/1 or /inventories/1.json
@@ -14,12 +14,9 @@ class InventoriesController < ApplicationController
     @inventory = Inventory.new
   end
 
-  # GET /inventories/1/edit
-  def edit; end
-
   # POST /inventories or /inventories.json
   def create
-    @inventory = Inventory.new(inventory_params)
+    @inventory = current_user.inventories.new(inventory_params)
 
     respond_to do |format|
       if @inventory.save
