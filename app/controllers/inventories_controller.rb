@@ -3,11 +3,15 @@ class InventoriesController < ApplicationController
 
   # GET /inventories or /inventories.json
   def index
-    @inventories = Inventory.where(user: current_user)
+    @inventories = current_user.inventories
   end
 
   # GET /inventories/1 or /inventories/1.json
-  def show; end
+  def show
+    @inventory = Inventory.find_by(id: params[:id])
+    @food = Food.new
+    @inventory_food = InventoryFood.new
+  end
 
   # GET /inventories/new
   def new
@@ -16,7 +20,9 @@ class InventoriesController < ApplicationController
 
   # POST /inventories or /inventories.json
   def create
-    @inventory = current_user.inventories.new(inventory_params)
+    # @inventory = current_user.inventories.new(inventory_params)
+    @inventory = Inventory.new(inventory_params)
+    @inventory.user_id = current_user.id
 
     respond_to do |format|
       if @inventory.save
