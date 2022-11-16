@@ -6,7 +6,6 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
-  
   private
 
   # Use callbacks to share common setup or constraints between actions.

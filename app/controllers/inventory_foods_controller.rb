@@ -1,5 +1,5 @@
 class InventoryFoodsController < ApplicationController
-  before_action :set_inventory_food, only: %i[ edit update destroy]
+  before_action :set_inventory_food, only: %i[edit update destroy]
 
   # GET /inventory_foods or /inventory_foods.json
   # def index
