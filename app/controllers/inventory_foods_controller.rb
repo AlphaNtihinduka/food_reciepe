@@ -1,10 +1,11 @@
 class InventoryFoodsController < ApplicationController
-  before_action :set_inventory_food, only: %i[show edit update destroy]
+  before_action :set_inventory_food, only: %i[ edit update destroy]
 
   # GET /inventory_foods or /inventory_foods.json
-  def index
-    @inventory_foods = InventoryFood.all
-  end
+  # def index
+  #   @inventory_foods = InventoryFood.all
+  #   # .where(inventory_id: inventory_id, food_id: food_id)
+  # end
 
   # GET /inventory_foods/1 or /inventory_foods/1.json
   def show; end
@@ -23,7 +24,7 @@ class InventoryFoodsController < ApplicationController
 
     respond_to do |format|
       if @inventory_food.save
-        format.html { redirect_to inventory_food_url(@inventory_food), notice: 'Inventory food was successfully created.' }
+        format.html { redirect_to inventory_food_url(@inventory_food.inventory_id), notice: 'Inventory food was successfully created.' }
         format.json { render :show, status: :created, location: @inventory_food }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -64,6 +65,6 @@ class InventoryFoodsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def inventory_food_params
-    params.require(:inventory_food).permit(:quantity)
+    params.require(:inventory_food).permit(:quantity, :inventory_id, :food_id)
   end
 end
