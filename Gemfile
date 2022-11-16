@@ -43,8 +43,8 @@ gem 'jbuilder'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 # gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
-gem 'tzinfo-data'
 gem 'ffi'
+gem 'tzinfo-data'
 
 # Windows passowrd add .env
 gem 'dotenv-rails'
