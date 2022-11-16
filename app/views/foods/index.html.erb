@@ -1,14 +1,39 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Foods</h1>
+<%# <h1>Foods</h1> %>
 
 <div id="foods">
-  <% @foods.each do |food| %>
-    <%= render food %>
-    <p>
-      <%= link_to "Show this food", food %>
-    </p>
-  <% end %>
+  <%= link_to "Add food", new_food_path %>
+  <table>
+    <thead>
+      <tr>
+        <th>Food</th>
+        <th>Measurement</th>
+        <th>Unit Price</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <% @foods.each do |food| %>
+      <%= render food %>      
+    <% end %>
+  </table>
+  
 </div>
 
-<%= link_to "New food", new_food_path %>
+<%# <%= link_to "New food", new_food_path %> 
+<style>
+  table {
+    border-collapse: collapse;
+    border-spacing: 0.5rem;
+    width: 30%;
+    text-align: center;
+  }
+  table, tr {
+    border-radius: 20px;
+  }
+  td, th {
+    border: 1px solid #999;
+    padding: 0.5rem;
+    text-align: left;
+  }
+</style>
