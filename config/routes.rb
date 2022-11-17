@@ -1,3 +1,5 @@
+Rails.application.routes.default_url_options[:host] = "XXX"
+
 Rails.application.routes.draw do
   devise_for :users
   resources :recipe_foods
