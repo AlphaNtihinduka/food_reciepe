@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :inventory_foods
   resources :inventories
   resources :foods
+  resources :public_recipes
   # resources :users
   root 'pages#home'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

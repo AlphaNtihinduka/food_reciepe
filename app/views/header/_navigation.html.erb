@@ -9,24 +9,27 @@
     <li>
       <%= link_to 'Edit', edit_user_registration_path, class: "nav_bar__link" %>
     </li>
-    <li> Welcome, 
+    <li> Welcome,
       <%= current_user.name %>
     </li>
     <li>
-    <%= link_to 'Foods', foods_path, class: "nav_bar__link" %>
+      <%= link_to 'Foods', foods_path, class: "nav_bar__link" %>
     </li>
     <li>
-    <%= link_to 'Recipes', recipes_path, class: "nav_bar__link" %>
-  </li>
-  <li>
-  <%= link_to 'Recipe foods', recipe_foods_path, class: "nav_bar__link" %>
-</li>
-  <li>
-  <%= link_to 'Inventories', inventories_path, class: "nav_bar__link" %>
-  </li>
-  <li>
-  <%= link_to 'Inventory foods', inventory_foods_path, class: "nav_bar__link" %>
-  </li>
+      <%= link_to 'Recipes', recipes_path, class: "nav_bar__link" %>
+    </li>
+    <li>
+      <%= link_to 'Public Recipes', public_recipes_path, class: "nav_bar__link" %>
+    </li>
+    <li>
+      <%= link_to 'Recipe foods', recipe_foods_path, class: "nav_bar__link" %>
+    </li>
+    <li>
+      <%= link_to 'Inventories', inventories_path, class: "nav_bar__link" %>
+    </li>
+    <li>
+      <%= link_to 'Inventory foods', inventory_foods_path, class: "nav_bar__link" %>
+    </li>
     <% else %>
     <li>
       <%= link_to 'Register', new_user_registration_path, class: "nav_bar__link" %>
