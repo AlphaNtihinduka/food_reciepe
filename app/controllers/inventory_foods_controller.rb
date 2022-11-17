@@ -24,7 +24,7 @@ class InventoryFoodsController < ApplicationController
 
     respond_to do |format|
       if @inventory_food.save
-        format.html { redirect_to inventory_food_url(@inventory_food.inventory_id), notice: 'Inventory food was successfully created.' }
+        format.html { redirect_to inventory_url(@inventory_food.inventory_id), notice: 'Inventory food was successfully created.' }
         format.json { render :show, status: :created, location: @inventory_food }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -51,7 +51,7 @@ class InventoryFoodsController < ApplicationController
     @inventory_food.destroy
 
     respond_to do |format|
-      format.html { redirect_to inventory_foods_url, notice: 'Inventory food was successfully destroyed.' }
+      format.html { redirect_to inventory_url, notice: 'Inventory food was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
