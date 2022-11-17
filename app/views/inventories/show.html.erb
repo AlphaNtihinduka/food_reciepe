@@ -11,15 +11,17 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
+
         <% InventoryFood.where(inventory_id: @inventory.id).each do |inventory_food| %>
-          <td><%= Inventory.find_by(id: inventory_food.inventory_id).name %></td>
+          <tr>
+          <td><%= Food.find_by(id: inventory_food.food_id).name %></td>
           <td> <%= inventory_food.quantity %> </td>
           <td>
           <%= button_to "Remove", inventory_food, method: :delete, data: { confirm: "Are you sure?" } %>
           </td> 
+          </tr>
         <% end %>
-      </tr>
+      
     </tbody>
   </table>
 
