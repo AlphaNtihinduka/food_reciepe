@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :inventories
   resources :foods
   resources :public_recipes
+  get 'shopping_list', to: 'foods#shopping_list'
   # resources :users
   root 'pages#home'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
