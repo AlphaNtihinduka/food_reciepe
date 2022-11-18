@@ -8,15 +8,15 @@ RSpec.describe InventoryFood, type: :model do
     @inventory_food = InventoryFood.create(quantity: 5, inventory_id: @inventory.id, food_id: @food.id)
   end
 
-  it 'Post should have valid attributes' do
+  it 'Inventoryfood should have valid attributes' do
     expect(@inventory_food.quantity).to eq(5)
   end
 
-  it 'Post should have valid attributes' do
+  it 'Inventoryfood should have valid attributes' do
     expect(@inventory_food).to be_valid
   end
 
-  it 'Post should have valid attributes' do
+  it 'user for inventory food should be valid' do
     expect(@user).to be_valid
   end
 end
