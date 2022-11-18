@@ -16,55 +16,46 @@
           <tr>
           <td><%= Food.find_by(id: inventory_food.food_id).name %></td>
           <td> <%= inventory_food.quantity %> </td>
-          <td>
           <%= button_to "Remove", inventory_food, method: :delete, data: { confirm: "Are you sure?" } %>
           </td> 
           </tr>
         <% end %>
       
     </tbody>
-  </table>
+</table>
 
 
-<style>
-  table {
-    border-collapse: collapse;
-    border-spacing: 0.5rem;
-    width: 30%;
-    text-align: center;
-  }
-  table, tr {
-    border-radius: 20px;
-  }
-  td, th {
-    border: 1px solid #999;
-    padding: 0.5rem;
-    text-align: left;
-  }
-</style>
+<div class="add_inventory_food_form">
+  <%= form_with(model: @inventory_food) do |form| %>
+    <% if @inventory_food.errors.any? %>
+      <div style="color: red">
+        <h2><%= pluralize(@inventory_food.errors.count, "error") %> prohibited this inventory_food from being saved:</h2>
 
-
-<%= form_with(model: @inventory_food) do |form| %>
-  <% if @inventory_food.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(@inventory_food.errors.count, "error") %> prohibited this inventory_food from being saved:</h2>
-
-      <ul>
-        <% @inventory_food.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
+        <ul>
+          <% @inventory_food.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div>
+      <div class="food_collection">
+      <%= collection_select(:inventory_food, :food_id, Food.all, :id, :name) %>
+      </div>
+      <div>
+        <%= form.label :quantity %> <br>
+        <%= form.number_field :quantity %>
+      </div>
+        <%= collection_select(:inventory_food, :inventory_id, Inventory.all, :id, :name) %>
+      <div class="create_inventory_food_btn">
+        <%= form.submit %>
+      </div>
     </div>
   <% end %>
+</div>
 
-  <div>
-  <%= collection_select(:inventory_food, :food_id, Food.all, :id, :name) %>
-    <%= form.label :quantity, style: "display: block" %>
-    <%= form.number_field :quantity %>
-    <%= collection_select(:inventory_food, :inventory_id, Inventory.all, :id, :name) %>
-  </div>
+<button class="add_inventory_food_btn">Add inventory food</button>
 
-  <div>
-    <%= form.submit %>
-  </div>
-<% end %>
+
+
+
