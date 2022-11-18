@@ -23,12 +23,15 @@
       </thead>
       <tbody>
         <% @foods.each do |food| %>
-          <tr>
-            <td><%= food.name %></td>
-            <td><%= InventoryFood.joins(:food).where(food_id: food.id).sum('quantity') - R %></td>
-            <td>$<%= InventoryFood.joins(:food).where(food_id: food.id).sum('quantity') * food.price %></td>
-            <td><%= button_to "Delete", food_path(food.id), data: {turbo_method: :delete, turbo_confirm: 'are you sure'}, method: :delete %></td>
-          </tr>
+          <% missing_food = RecipeFood.joins(:food).where(food_id: food.id).sum('quantity') - InventoryFood.joins(:food).where(food_id: food.id).sum('quantity') %>
+          <% if missing_food > 0 %>
+            <tr>
+              <td><%= food.name %></td>
+              <td><%= missing_food %></td>
+              <td>$<%= InventoryFood.joins(:food).where(food_id: food.id).sum('quantity') * food.price %></td>
+              <td><%= button_to "Delete", food_path(food.id), data: {turbo_method: :delete, turbo_confirm: 'are you sure'}, method: :delete %></td>
+            </tr>
+          <% end %>
         <% end %>
       </tbody>
     </table>
