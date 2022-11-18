@@ -55,6 +55,10 @@ class FoodsController < ApplicationController
     end
   end
 
+  def shopping_list
+    @foods = current_user.foods
+  end
+
   private
 
   # Use callbacks to share common setup or constraints between actions.
