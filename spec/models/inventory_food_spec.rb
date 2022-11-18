@@ -11,4 +11,12 @@ RSpec.describe InventoryFood, type: :model do
   it 'Post should have valid attributes' do
     expect(@inventory_food.quantity).to eq(5)
   end
+
+  it 'Post should have valid attributes' do
+    expect(@inventory_food).to be_valid
+  end
+
+  it 'Post should have valid attributes' do
+    expect(@user).to be_valid
+  end
 end
