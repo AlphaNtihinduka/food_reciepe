@@ -1,42 +1,55 @@
 
 <nav class="nav_bar">
-<a href="/" class="nav_bar__logo">Food recipe</a>
-<ul class="nav_bar__links">
+  <a href="/" class="nav_bar__logo">Food recipe</a>
   <% if user_signed_in? %>
-    <li>
-      <%= button_to "Log out", destroy_user_session_path, method: :delete, data: { turbo: false }, class: "nav_bar__btn" %>
-    </li>
-    <li>
-      <%= link_to 'Edit', edit_user_registration_path, class: "nav_bar__link" %>
-    </li>
-    <li> Welcome,
+    <p class="welcome"> Welcome,
       <%= current_user.name %>
-    </li>
-    <li>
-      <%= link_to 'Foods', foods_path, class: "nav_bar__link" %>
-    </li>
-    <li>
-      <%= link_to 'Recipes', recipes_path, class: "nav_bar__link" %>
-    </li>
-    <li>
-      <%= link_to 'Public Recipes', public_recipes_path, class: "nav_bar__link" %>
-    </li>
-    <li>
-      <%= link_to 'Recipe foods', recipe_foods_path, class: "nav_bar__link" %>
-    </li>
-    <li>
-      <%= link_to 'Inventories', inventories_path, class: "nav_bar__link" %>
-    </li>
-    <li>
-      <%= link_to 'Inventory foods', inventory_foods_path, class: "nav_bar__link" %>
-    </li>
-    <% else %>
-    <li>
-      <%= link_to 'Register', new_user_registration_path, class: "nav_bar__link" %>
-    </li>
-    <li>
-      <%= link_to 'Sign in', new_user_session_path, class: "nav_bar__link" %>
-    </li>
+    </p>
+    <ul class="nav_bar__links">
+      <li>
+        <%= link_to 'Foods', foods_path, class: "nav_bar__link" %>
+      </li>
+      <li>
+        <%= link_to 'Recipes', recipes_path, class: "nav_bar__link" %>
+      </li>
+      <li>
+        <%= link_to 'Public Recipes', public_recipes_path, class: "nav_bar__link" %>
+      </li>
+      <li>
+        <%= link_to 'Recipe foods', recipe_foods_path, class: "nav_bar__link" %>
+      </li>
+      <li>
+        <%= link_to 'Inventories', inventories_path, class: "nav_bar__link" %>
+      </li>
+      <li>
+        <%= link_to 'Inventory foods', inventory_foods_path, class: "nav_bar__link" %>
+      </li>
+      <li>
+        <%= link_to 'Edit', edit_user_registration_path, class: "nav_bar__link" %>
+      </li>
+      <li>
+        <%= button_to "Log out", destroy_user_session_path, method: :delete, data: { turbo: false }, class: "nav_bar__btn" %>
+  <% else %>
+      </li>
+    </ul>
+    <ul class="nav_bar__links">
+      <li>
+        <%= link_to 'Register', new_user_registration_path, class: "nav_bar__link" %>
+      </li>
+      <li>
+        <%= link_to 'Sign in', new_user_session_path, class: "nav_bar__link" %>
+      </li>
+    </ul>
   <% end %>
-</ul>
 </nav>
+
+<footer>
+  <h5>©2022 
+    by <span><%= link_to 'Rodrigo J. R. Nunes', 'https://github.com/aron-helu' %></span>,
+    <span><%= link_to 'Aron', 'https://github.com/aron-helu' %></span>,
+    <span><%= link_to 'NTIHINDUKA ALPHA', 'https://github.com/AlphaNtihinduka' %></span>
+  All rights reserved.
+
+  </h5>
+  
+</footer>

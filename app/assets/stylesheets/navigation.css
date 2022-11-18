@@ -1,0 +1,95 @@
+.nav_bar {
+    border: 35px solid rgb(14, 13, 13);
+    background-image: url(dust.png);
+    border-image: url(border.png) 10 stretch;
+    width: 96%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(8, 0, 0, 0.4);
+    color: rgb(6, 76, 207);
+    list-style-type: none;
+    gap: 60px;
+}
+
+.nav_bar__links {
+    list-style-type: none;
+    display: flex;
+    width: 60%;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav_bar__link {
+    padding: 5px;
+    font-size: 25px;
+}
+
+.welcome {
+    font-size: 38px;
+}
+
+a {
+    color: rgb(253, 251, 251);
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.nav_bar__btn {
+    background-color: rgba(221, 230, 240, 0.4);
+    padding: 10px;
+    border-radius: 20px;
+    color: antiquewhite;
+    font-size: 15px;
+}
+
+.container {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+
+.home {
+    padding: 15px;
+    text-align: center;
+    background-color: rgba(221, 230, 240, 0.4);
+}
+
+.container-card {
+    padding: 25px;
+    display: flex;
+    width: 95%;
+    margin: auto;
+    gap: 30px;
+
+}
+
+.card {
+    background-color: rgba(221, 230, 240, 0.4);
+    -webkit-box-shadow: 3px 3px 7px rgba(0,0,0,0.3);
+    box-shadow: 10px 23px 47px rgb(7, 0, 0);
+    text-align: center;
+    color: black;
+    width: 90%;
+    padding: 15px;
+    gap: 20px;
+}
+
+.img-food {
+    width: 95%;
+    height: 30vh;
+}
+
+footer {
+    border: 15px solid rgb(51, 47, 47);
+    border-image: url(border.png) 15 stretch;
+    background-image: url(dust.png);
+    background-color: rgba(8, 8, 8, 0.4);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 5px;
+    font-size: 24px;
+    text-align: center;
+    letter-spacing: 3px;
+}
