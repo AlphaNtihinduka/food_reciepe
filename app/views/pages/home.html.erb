@@ -1,1 +1,26 @@
-<h1>Hello, welcome to our recipe food page. Enjoy the meal.</h1>
+<div class="container">
+    <div class="home">
+        <h1 class="home_page">Hello, welcome <%= current_user.name %> to our recipe food page. Enjoy the meal.</h1>
+    </div>
+    <div class="container-card">
+        <%= link_to foods_path do %>
+            <div class="card">
+                <h3 class="header">Foods</h3>
+                <%= image_tag "pexels-photo-1907227.webp", class: 'img-food'%>
+            </div>
+        <% end %>
+        <%= link_to recipes_path do %>
+            <div class="card">
+                <h3 class="header">Recipes</h3>
+                <%= image_tag "depositphotos_71739083-stock-photo-healthy-vegetarian-home-made-food.jpg", class: 'img-food'%>
+            </div>
+        <% end %>
+        <%= link_to inventories_path do %>
+            <div class="card">
+                <h3 class="header">Inventories</h3>
+                <%= image_tag "supermarket-food-shelves-eggplant-cabbage-carrot-peppers-onions-corn-bread-potatoes-shopping-fresh-vector-illustration-51778827.jpg", class: 'img-food'%>
+            </div>
+        <% end %>
+    </div>
+</div>    
+
