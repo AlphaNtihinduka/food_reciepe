@@ -61,8 +61,17 @@
 
   <div class="generate-shopping-list-container" id="pop-up">
       <button id="close-btn" class="close-btn">&times;</button>
-      <%= collection_select(:inventory_food, :inventory_id, Inventory.all, :id, :name) %>
-      <%= link_to "Generate Shopping List",  general_shopping_list_index_path, class: "generate-btn" %>
+      <%=form_with url: general_shopping_list_index_path, method: :get do |f| %>
+        <div>
+          <div>
+            <%= f.select :inventory_id, Inventory.all.collect { |inventory| [inventory.name, inventory.id] }, :prompt => 'Select an Inventory', class: 'focus:outline-none', required: true %>
+          </div>
+          <%= f.hidden_field :recipe_id, value: @recipe.id, required: true %>
+        </div>
+        <div>
+          <%= f.submit "Generate"  %>
+        </div>
+      <% end %>
   </div>
   </div>
   <script>
