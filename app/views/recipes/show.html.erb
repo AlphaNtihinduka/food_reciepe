@@ -4,7 +4,7 @@
   <div class="link-btn-recipe">
     <%= link_to "Edit this recipe", edit_recipe_path(@recipe), class: "actions" %> |
     <%= link_to "Back to recipes", recipes_path, class: "actions" %>
-
+    <button class="generate-shopping-list-btn"> Generate Shopping list </button>
     <%= button_to "Destroy this recipe", @recipe, method: :delete, class: "delete" %>
   </div>
 
@@ -46,7 +46,7 @@
           </ul>
         </div>
     <% end %>
-      <div>
+      <>
         <div class="food_collection_recipe">
           <%= collection_select(:recipe_food, :food_id, Food.all, :id, :name) %>
           <%= form.label :quantity, style: "display: block" %>
@@ -58,7 +58,27 @@
         </div>
       </div>
   <% end %>
+
+  <div class="generate-shopping-list-container" id="pop-up"
+    style="background-color:rgba(150,150,150, 0.7);
+    display: none;
+    visibility: hidden;
+    top: -10025%;
+    left:25%;
+    width:50vw;
+    height:50vh;
+    z-index:2;
+    position:absolute;
+    box-sizing: border-box;
+  ">
+      <button id="close-btn" class="close-btn">&times;</button>
+      <h1>Hello There!</h1>
+
   </div>
+  </div>
+
 </div>
+
+
 
 
