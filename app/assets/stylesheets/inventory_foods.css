@@ -16,6 +16,7 @@ table {
   border-collapse: collapse;
   padding: 2rem;
   margin: 1rem auto;
+  font-size: 1.3rem;
 }
 
 table th {
@@ -30,7 +31,8 @@ table td {
   text-align: center;
   padding: 1rem 2rem 1rem 2rem;
   background: #746767;
-  color: #313030;
+  color: #0c0b0b;
+  font-size: 1.3rem;
 }
 
 .delete_btn button {

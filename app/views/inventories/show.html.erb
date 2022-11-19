@@ -1,6 +1,7 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @inventory %>
+<div class="show-inventory">
+  <%= render @inventory %>
 
 <table>
     <thead>
@@ -25,7 +26,6 @@
       
     </tbody>
 </table>
-
 
 <div class="add_inventory_food_form">
   <%= form_with(model: @inventory_food) do |form| %>
@@ -56,8 +56,4 @@
   <% end %>
 </div>
 
-<button class="add_inventory_food_btn">Add inventory food</button>
-
-
-
-
+</div>

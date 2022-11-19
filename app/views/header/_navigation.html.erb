@@ -13,12 +13,6 @@
         <%= link_to 'Recipes', recipes_path, class: "nav_bar__link" %>
       </li>
       <li>
-        <%= link_to 'Public Recipes', public_recipes_path, class: "nav_bar__link" %>
-      </li>
-      <li>
-        <%= link_to 'Recipe foods', recipe_foods_path, class: "nav_bar__link" %>
-      </li>
-      <li>
         <%= link_to 'Inventories', inventories_path, class: "nav_bar__link" %>
       </li>
       <li>
@@ -29,8 +23,8 @@
       </li>
       <li>
         <%= button_to "Log out", destroy_user_session_path, method: :delete, data: { turbo: false }, class: "nav_bar__btn" %>
+      </li>  
   <% else %>
-      </li>
     </ul>
     <ul class="nav_bar__links">
       <li>
@@ -42,14 +36,3 @@
     </ul>
   <% end %>
 </nav>
-
-<footer>
-  <h5>©2022 
-    by <span><%= link_to 'Rodrigo J. R. Nunes', 'https://github.com/aron-helu' %></span>,
-    <span><%= link_to 'Aron', 'https://github.com/aron-helu' %></span>,
-    <span><%= link_to 'NTIHINDUKA ALPHA', 'https://github.com/AlphaNtihinduka' %></span>
-  All rights reserved.
-
-  </h5>
-  
-</footer>

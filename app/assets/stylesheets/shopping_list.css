@@ -1,0 +1,10 @@
+.shopping_list {
+    border: 2px solid red;
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    background-color: rgba(7, 60, 110, 0.6);
+    color: black;
+    padding-bottom: 20px;
+    font-size: 20px;
+}
