@@ -29,3 +29,16 @@ add_recipe_btn.addEventListener("click", () => {
 //     window.location.reload();
 // })
  */
+
+const shopping_list_btn = document.querySelector(".generate-shopping-list-btn");
+const generate_shopping_list_container = document.querySelector(".generate-shopping-list-container");
+const close_btn = document.querySelector(".close-btn");
+
+shopping_list_btn.addEventListener("click", () => {
+  console.log('click')
+  generate_shopping_list_container.style.top = "25%";
+})
+
+close_btn.addEventListener("click", () => {
+  generate_shopping_list_container.style.top = "-100%";
+})
