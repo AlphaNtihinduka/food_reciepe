@@ -12,7 +12,7 @@ class Ability
     can :manage, Recipe, user: user
     can :manage, RecipeFood, user: user
     can :manage, Inventory, user: user
-    can :mane, InventoryFood, user: user
+    can :mane, InventoryFood, user:
     #   can :read, :all
     #   return unless user.admin?
     #   can :manage, :all

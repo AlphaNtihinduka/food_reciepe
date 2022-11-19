@@ -40,19 +40,19 @@
 
 .inventory-form {
   margin: auto;
-    width: 50%;
-    text-align: center;
-    background-color: rgba(7, 60, 110, 0.6);
-    color: black;
-    padding: 20px;
+  width: 50%;
+  text-align: center;
+  background-color: rgba(7, 60, 110, 0.6);
+  color: black;
+  padding: 20px;
 }
 
 .show-inventory {
   margin: auto;
-    width: 50%;
-    text-align: center;
-    background-color: rgba(7, 60, 110, 0.6);
-    color: black;
-    padding: 20px;
-    font-size: 20px;
+  width: 50%;
+  text-align: center;
+  background-color: rgba(7, 60, 110, 0.6);
+  color: black;
+  padding: 20px;
+  font-size: 20px;
 }
