@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :inventories
   resources :foods
   resources :public_recipes
-  resources :genereal_shopping_list
+  resources :general_shopping_list
   get 'shopping_list', to: 'foods#shopping_list'
   # resources :users
   root 'pages#home'

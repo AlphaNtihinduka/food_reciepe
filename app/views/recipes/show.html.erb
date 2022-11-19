@@ -59,22 +59,19 @@
       </div>
   <% end %>
 
-  <div class="generate-shopping-list-container" id="pop-up"
-    style="background-color:rgba(150,150,150, 0.7);
-    top: -100%;
-    left:25%;
-    width:50vw;
-    height:50vh;
-    z-index:2;
-    position:absolute;
-    box-sizing: border-box;
-  ">
+  <div class="generate-shopping-list-container" id="pop-up">
       <button id="close-btn" class="close-btn">&times;</button>
-      <h1>Hello There!</h1>
-
+      <%= collection_select(:inventory_food, :inventory_id, Inventory.all, :id, :name) %>
+      <%= link_to "Generate Shopping List",  general_shopping_list_index_path, class: "generate-btn" %>
   </div>
   </div>
-
+  <script>
+    const shopping_list_btn = document.querySelector(".generate-shopping-list-btn");
+    const generate_shopping_list_container = document.querySelector(".generate-shopping-list-container");
+    const close_btn = document.querySelector(".close-btn");
+    shopping_list_btn.addEventListener("click", () => {generate_shopping_list_container.style.top = "25%";})
+    close_btn.addEventListener("click", () => {generate_shopping_list_container.style.top = "-100%";})
+  </script>
 </div>
 
 

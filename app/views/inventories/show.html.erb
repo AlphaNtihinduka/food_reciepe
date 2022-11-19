@@ -57,3 +57,18 @@
 </div>
   <button class="add_inventory_food_btn">Add inventory food</button>
 </div>
+
+<script>
+  const add_btn = document.querySelector(".add_inventory_food_btn");
+  const add_inventory_form = document.querySelector(".add_inventory_food_form");
+  const create_inventory_food_btn = document.querySelector(".create_inventory_food_btn");
+  add_btn.addEventListener("click", () => { add_inventory_form.style.display = "block" });
+  create_inventory_food_btn.addEventListener("click", () => {
+    add_inventory_form.style.display = "none"
+    window.location.reload();
+  })
+  const add_recipe_btn = document.querySelector(".add_recipe_food_btn")
+  add_recipe_btn.addEventListener("click", () => {
+  console.log("click")
+  })
+</script>
