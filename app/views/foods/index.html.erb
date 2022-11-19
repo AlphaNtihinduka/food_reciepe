@@ -1,9 +1,9 @@
 <p style="color: green"><%= notice %></p>
-
-<%# <h1>Foods</h1> %>
+ 
+<h1 class="recipes_header">Foods</h1> 
 
 <div id="foods">
-  <%= link_to "Add food", new_food_path %>
+  <%= link_to "Add food", new_food_path, class: "add-food" %>
   <table>
     <thead>
       <tr>
@@ -19,21 +19,3 @@
   </table>
   
 </div>
-
-<%# <%= link_to "New food", new_food_path %> 
-<style>
-  table {
-    border-collapse: collapse;
-    border-spacing: 0.5rem;
-    width: 30%;
-    text-align: center;
-  }
-  table, tr {
-    border-radius: 20px;
-  }
-  td, th {
-    border: 1px solid #999;
-    padding: 0.5rem;
-    text-align: left;
-  }
-</style>
