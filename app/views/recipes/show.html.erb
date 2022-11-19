@@ -48,7 +48,7 @@
     <% end %>
       <div>
         <div class="food_collection_recipe">
-          <%= collection_select(:recipe_food, :food_id, Food.all, :id, :name) %> 
+          <%= collection_select(:recipe_food, :food_id, Food.all, :id, :name) %>
           <%= form.label :quantity, style: "display: block" %>
           <%= form.number_field :quantity %>
           <%= form.hidden_field :recipe_id, value: params[:id] %>
