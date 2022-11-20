@@ -119,3 +119,29 @@
   text-align: center;
   color: antiquewhite;
 }
+
+#public_recipes {
+  text-align: center;
+  display: flex;
+  width: 90%;
+  margin: auto;
+  font-size: 1.3rem;
+  color: antiquewhite;
+}
+
+.rod {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  font-size: 1.3rem;
+  color: antiquewhite;
+  text-align: center;
+}
+
+.al {
+  width: 100%;
+}
+
+.ar {
+  width: 70%;
+}
