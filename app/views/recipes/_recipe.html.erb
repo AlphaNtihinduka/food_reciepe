@@ -1,20 +1,12 @@
 <div class=recipe-card>
+  <%= link_to recipe do %>
   <div class="recipe-container" id="<%= dom_id recipe %>">
-    <p class="recipe-name">
-      <strong>Name:</strong>
-      <%= recipe.name %>
-    </p>
-    <div class="recipe-flex">
-      <p>
-        <strong>Prep time:</strong>
-        <%= recipe.prep_time %>
+      <div class="recipe-flex">
+      <p class="recipe-name">
+        <strong>Name:</strong>
+        <%= recipe.name %>
       </p>
-
-      <p>
-        <strong>Cooking time:</strong>
-        <%= recipe.cooking_time %>
-      </p>
-
+      <%= button_to "Remove", recipe, method: :delete, data: { confirm: "Are you sure?" } %>
     </div>
     <div class="recipe-flex">
       <p>
@@ -25,11 +17,8 @@
       <p>
         <strong>Public:</strong>
         <%= recipe.public %>
-      </p>  
-      <p>
-        <%= link_to "Show this recipe", recipe %>
       </p>
-    </div>  
+    </div>
   </div>
-
+  <% end %>
 </div>
