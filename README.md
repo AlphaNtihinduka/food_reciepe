@@ -26,6 +26,16 @@
 
 ![](./recipe_erd.png)
 
+## Quick view
+
+![](././app/assets/images/Screenshot%20from%202022-11-20%2003-02-03.png)
+
+![](././app/assets/images/Screenshot%20from%202022-11-20%2003-02-42.png)
+
+![](././app/assets/images/Screenshot%20from%202022-11-20%2003-21-57.png)
+
+![](././app/assets/images/Screenshot%20from%202022-11-20%2003-03-00.png)
+
 
 ## Getting Started ➡️
 

@@ -98,3 +98,14 @@
 .new-recipe {
   text-align: center;
 }
+
+.generate-shopping-list-container {
+  background-color: rgba(150, 150, 150, 0.7);
+  top: -100%;
+  left: 25%;
+  width: 50vw;
+  height: 50vh;
+  z-index: 2;
+  position: absolute;
+  box-sizing: border-box;
+}

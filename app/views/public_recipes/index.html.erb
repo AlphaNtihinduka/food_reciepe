@@ -4,7 +4,22 @@
 
 <div id="public_recipes">
   <% @public_recipes.each do |public_recipes| %>
-    <%= render public_recipes %>
+    <p>
+    <strong>Name:</strong>
+    <%= public_recipes.name %>
+    </p>
+    <p>
+      <strong>by: </strong>
+      <%= public_recipes.user.name %>
+    </p>
+    <p>
+        <span>Amount of food items to buy: </span>
+        <span>&nbsp;<%= public_recipes.foods.length %></span>
+    </p>
+    <p>
+        <span>Total value:</span>
+        <span>&nbsp;<%= @prices.sum %></span>
+    </p>
     <p>
       <%= link_to "Show this recipe", public_recipes %>
     </p>
