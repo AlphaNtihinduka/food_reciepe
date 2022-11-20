@@ -74,15 +74,21 @@
       <% end %>
   </div>
   </div>
-  <script>
+</div>
+ <script>
     const shopping_list_btn = document.querySelector(".generate-shopping-list-btn");
+    const  create_recipe_food_btn= document.querySelector("#create_recipe_food_btn");
     const generate_shopping_list_container = document.querySelector(".generate-shopping-list-container");
     const close_btn = document.querySelector(".close-btn");
     shopping_list_btn.addEventListener("click", () => {generate_shopping_list_container.style.top = "25%";})
+    create_recipe_food_btn.addEventListener("click", () => {
+      console.log("click")
+      setTimeout(function(){
+        window.location.reload();
+     }, 400);
+    })
     close_btn.addEventListener("click", () => {generate_shopping_list_container.style.top = "-100%";})
   </script>
-</div>
-
 
 
 
