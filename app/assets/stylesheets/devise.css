@@ -62,3 +62,13 @@ input::placeholder {
   padding-bottom: 20px;
   font-size: 20px;
 }
+
+.public-recipes {
+  margin: auto;
+  width: 50%;
+  text-align: center;
+  background-color: rgba(7, 60, 110, 0.6);
+  color: black;
+  padding-bottom: 20px;
+  font-size: 20px;
+}

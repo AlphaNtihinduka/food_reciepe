@@ -1,7 +1,6 @@
 <p style="color: green"><%= notice %></p>
-
-<div class="show-inventory">
-  <%= render @inventory %>
+<div class="show-inventory"> 
+<%= render @inventory %>
 
 <table>
     <thead>
@@ -20,14 +19,16 @@
           <td>
           <%= button_to "Remove", inventory_food, method: :delete, data: { confirm: "Are you sure?" } %>
           </td>
-          </td>
+          </td> 
           </tr>
         <% end %>
-
+      
     </tbody>
 </table>
 
+
 <div class="add_inventory_food_form">
+<button id="close-btn" class="close-btn">&times;</button>
   <%= form_with(model: @inventory_food) do |form| %>
     <% if @inventory_food.errors.any? %>
       <div style="color: red">
@@ -55,20 +56,15 @@
     </div>
   <% end %>
 </div>
-  <button class="add_inventory_food_btn">Add inventory food</button>
 </div>
-
+<button class="add_inventory_food_btn">Add inventory food</button>
 <script>
-  const add_btn = document.querySelector(".add_inventory_food_btn");
-  const add_inventory_form = document.querySelector(".add_inventory_food_form");
-  const create_inventory_food_btn = document.querySelector(".create_inventory_food_btn");
-  add_btn.addEventListener("click", () => { add_inventory_form.style.display = "block" });
-  create_inventory_food_btn.addEventListener("click", () => {
-    add_inventory_form.style.display = "none"
-    window.location.reload();
+const add_btn = document.querySelector(".add_inventory_food_btn")
+const add_inventory_form = document.querySelector(".add_inventory_food_form")
+const close_btn = document.querySelector(".close-btn");
+
+add_btn.addEventListener("click", ()=> {
+    add_inventory_form.style.display = "block"
   })
-  const add_recipe_btn = document.querySelector(".add_recipe_food_btn")
-  add_recipe_btn.addEventListener("click", () => {
-  console.log("click")
-  })
+close_btn.addEventListener("click", () => {add_inventory_form.style.display = "none"})
 </script>

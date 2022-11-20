@@ -20,7 +20,7 @@ class InventoryFoodsController < ApplicationController
 
   # POST /inventory_foods or /inventory_foods.json
   def create
-    @inventory_food = InventoryFood.new(inventory_food_params).includes([:food])
+    @inventory_food = InventoryFood.new(inventory_food_params)
 
     respond_to do |format|
       if @inventory_food.save
