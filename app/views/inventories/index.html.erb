@@ -4,11 +4,16 @@
 
 <div id="inventories">
   <% @inventories.each do |inventory| %>
-    <div id="inventory">
-    <%= render inventory %>
-    <p class="show_inventory">
-      <%= link_to "Show this inventory", inventory, class: "action" %>
-    </p>
+    <div id="inventory ">
+    <div class="flex width80">
+      <div class="flex-column ">
+        <%= render inventory %>
+        <p class="show_inventory">
+          <%= link_to "Show this inventory", inventory, class: "action" %>
+        </p>
+      </div>
+      <div> Lorem auhfasfh adoiufh adfuhad ifa hauihg uahdg asdiugh asduigoh a</div>
+    </div>
   </div>
   <% end %>
 </div>
