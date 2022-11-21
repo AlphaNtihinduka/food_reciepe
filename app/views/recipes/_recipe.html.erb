@@ -20,5 +20,8 @@
     </div>
   </div>
   <% end %>
-  <%= button_to "Remove", @recipes_path, method: :delete, data: { confirm: "Are you sure?" }, class: "actions" %>
+  <% if can? :destroy, recipe %>
+  <%= button_to "Remove", recipe, method: :delete, data: { confirm: "Are you sure?" }, class: "actions" %>
+  <% end %>
 </div>
+
