@@ -1,0 +1,41 @@
+
+<nav class="nav_bar">
+  <a href="/" class="nav_bar__logo">Food recipe</a>
+  <% if user_signed_in? %>
+    <p class="welcome"> Welcome,
+      <%= current_user.name %>
+    </p>
+    <ul class="nav_bar__links">
+      <li>
+        <%= link_to 'Foods', foods_path, class: "nav_bar__link" %>
+      </li>
+      <li>
+        <%= link_to 'Recipes', recipes_path, class: "nav_bar__link" %>
+      </li>
+      <li>
+      <%= link_to 'Public Recipes', public_recipes_path, class: "nav_bar__link" %>
+      </li>
+      <li>
+        <%= link_to 'Inventories', inventories_path, class: "nav_bar__link" %>
+      </li>
+      <li>
+        <%= link_to 'Shopping List', shopping_list_path, class: "nav_bar__link" %>
+      </li>
+      <li>
+        <%= link_to 'Edit', edit_user_registration_path, class: "nav_bar__link" %>
+      </li>
+      <li>
+        <%= button_to "Log out", destroy_user_session_path, method: :delete, data: { turbo: false }, class: "nav_bar__btn" %>
+      </li>
+  <% else %>
+    </ul>
+    <ul class="nav_bar__links">
+      <li>
+        <%= link_to 'Register', new_user_registration_path, class: "nav_bar__link" %>
+      </li>
+      <li>
+        <%= link_to 'Sign in', new_user_session_path, class: "nav_bar__link" %>
+      </li>
+    </ul>
+  <% end %>
+</nav>
