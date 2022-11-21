@@ -28,7 +28,6 @@
 
 
 <div class="add_inventory_food_form">
-<button id="close-btn" class="close-btn">&times;</button>
   <%= form_with(model: @inventory_food) do |form| %>
     <% if @inventory_food.errors.any? %>
       <div style="color: red">
@@ -47,7 +46,7 @@
       </div>
       <div>
         <%= form.label :quantity %> <br>
-        <%= form.number_field :quantity %>
+        <%= form.number_field :quantity, placeholder: "Add quantity" %>
       </div>
         <%= collection_select(:inventory_food, :inventory_id, Inventory.all, :id, :name) %>
       <div class="create_inventory_food_btn">
@@ -57,22 +56,3 @@
   <% end %>
 </div>
 </div>
-<button class="add_inventory_food_btn">Add inventory food</button>
-<script>
-const add_btn = document.querySelector(".add_inventory_food_btn")
-const create_btn = document.querySelector(".create_inventory_food_btn")
-const add_inventory_form = document.querySelector(".add_inventory_food_form")
-const close_btn = document.querySelector(".close-btn");
-
-add_btn.addEventListener("click", ()=> {
-    add_inventory_form.style.display = "block"
-  })
-
-  create_btn.addEventListener("click", () => {
-    add_inventory_form.style.display = "none"
-    setTimeout(function(){
-   window.location.reload();
-}, 400);
-  })
-close_btn.addEventListener("click", () => {add_inventory_form.style.display = "none"})
-</script>

@@ -43,8 +43,8 @@ table td {
 
 .add_inventory_food_form {
   margin: 0 auto;
-  width: 50%;
-  display: none;
+  width: 90%;
+  display: block;
 }
 
 .add_inventory_food_btn {

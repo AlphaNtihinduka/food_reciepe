@@ -6,7 +6,6 @@
         <strong>Name:</strong>
         <%= recipe.name %>
       </p>
-      <%= button_to "Remove", recipe, method: :delete, data: { confirm: "Are you sure?" } %>
     </div>
     <div class="recipe-flex">
       <p>
@@ -21,4 +20,5 @@
     </div>
   </div>
   <% end %>
+  <%= button_to "Remove", @recipes_path, method: :delete, data: { confirm: "Are you sure?" }, class: "actions" %>
 </div>
